@@ -14,10 +14,10 @@ $ npm install vue-bulma-card --save
 ```vue
 <template>
   <div>
-    <base-card 
+    <base-card
       :icon="'angle-right'"
-      :title="'Github'" 
-      :content="'Welcome to Github'">
+      :title="'Github'">
+      <p slot="content">Welcome to Github</p>
       <card-footer-item slot="footer" :href="'https://github.com'">
         <span class="icon is-small">
           <i aria-hidden="true" class="fa fa-github"></i>
