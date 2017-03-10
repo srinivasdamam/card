@@ -17,8 +17,10 @@
           </span>
         </a>
       </header>
-      <div class="card-content">
-        <div class="content">{{ content }}</div>
+      <div class="card-content" v-if="!!this.$slots.content">
+        <div class="content">
+          <slot name="content"></slot>
+        </div>
       </div>
       <footer class="card-footer" v-if="!!this.$slots.footer">
         <slot name="footer"></slot>
@@ -34,7 +36,6 @@ export default {
       type: String
     },
     icon: String,
-    content: String,
     transition: {
       type: String,
       default: 'fade'
